@@ -1,0 +1,565 @@
+D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection>python model_main.py     --pipeline_config_path=D:/cwge/ObjectDetection_MaskRCNN/mask_rcnn_inception_v2_coco.config     --model_dir=training     --num_train_steps=60000     --alsologtostderr
+2020-09-23 18:42:45.741476: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudart64_100.dll
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+    If you depend on functionality not listed there, please file an issue.
+
+C:\ProgramData\Anaconda3\lib\site-packages\dask\dataframe\utils.py:14: FutureWarning: pandas.util.testing is deprecated. Use the functions in the public API at pandas.testing instead.
+  import pandas.util.testing as tm
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\slim\nets\inception_resnet_v2.py:373: The name tf.GraphKeys is deprecated. Please use tf.compat.v1.GraphKeys instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\slim\nets\mobilenet\mobilenet.py:389: The name tf.nn.avg_pool is deprecated. Please use tf.nn.avg_pool2d instead.
+
+Using TensorFlow backend.
+WARNING:tensorflow:From model_main.py:122: The name tf.app.run is deprecated. Please use tf.compat.v1.app.run instead.
+
+WARNING:tensorflow:From model_main.py:72: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+W0923 18:42:49.464529 23848 module_wrapper.py:139] From model_main.py:72: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\utils\config_util.py:94: The name tf.gfile.GFile is deprecated. Please use tf.io.gfile.GFile instead.
+
+W0923 18:42:49.465530 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\utils\config_util.py:94: The name tf.gfile.GFile is deprecated. Please use tf.io.gfile.GFile instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\model_lib.py:573: The name tf.logging.warning is deprecated. Please use tf.compat.v1.logging.warning instead.
+
+W0923 18:42:49.469528 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\model_lib.py:573: The name tf.logging.warning is deprecated. Please use tf.compat.v1.logging.warning instead.
+
+WARNING:tensorflow:Forced number of epochs for all eval validations to be 1.
+W0923 18:42:49.470526 23848 model_lib.py:574] Forced number of epochs for all eval validations to be 1.
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\utils\config_util.py:480: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+W0923 18:42:49.470526 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\utils\config_util.py:480: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+INFO:tensorflow:Maybe overwriting train_steps: 60000
+I0923 18:42:49.471528 23848 config_util.py:480] Maybe overwriting train_steps: 60000
+INFO:tensorflow:Maybe overwriting sample_1_of_n_eval_examples: 1
+I0923 18:42:49.471528 23848 config_util.py:480] Maybe overwriting sample_1_of_n_eval_examples: 1
+INFO:tensorflow:Maybe overwriting eval_num_epochs: 1
+I0923 18:42:49.471528 23848 config_util.py:480] Maybe overwriting eval_num_epochs: 1
+INFO:tensorflow:Maybe overwriting load_pretrained: True
+I0923 18:42:49.478532 23848 config_util.py:480] Maybe overwriting load_pretrained: True
+INFO:tensorflow:Ignoring config override key: load_pretrained
+I0923 18:42:49.478532 23848 config_util.py:490] Ignoring config override key: load_pretrained
+WARNING:tensorflow:Expected number of evaluation epochs is 1, but instead encountered `eval_on_train_input_config.num_epochs` = 0. Overwriting `num_epochs` to 1.
+W0923 18:42:49.479499 23848 model_lib.py:590] Expected number of evaluation epochs is 1, but instead encountered `eval_on_train_input_config.num_epochs` = 0. Overwriting `num_epochs` to 1.
+INFO:tensorflow:create_estimator_and_inputs: use_tpu False, export_to_tpu False
+I0923 18:42:49.480523 23848 model_lib.py:623] create_estimator_and_inputs: use_tpu False, export_to_tpu False
+INFO:tensorflow:Using config: {'_model_dir': 'training', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 600, '_session_config': gpu_options {
+  per_process_gpu_memory_fraction: 0.3
+  allow_growth: true
+}
+allow_soft_placement: true
+, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_experimental_max_worker_delay_secs': None, '_session_creation_timeout_secs': 7200, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x000001FE1C5F5DA0>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+I0923 18:42:49.480523 23848 estimator.py:212] Using config: {'_model_dir': 'training', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 600, '_session_config': gpu_options {
+  per_process_gpu_memory_fraction: 0.3
+  allow_growth: true
+}
+allow_soft_placement: true
+, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_experimental_max_worker_delay_secs': None, '_session_creation_timeout_secs': 7200, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x000001FE1C5F5DA0>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+WARNING:tensorflow:Estimator's model_fn (<function create_model_fn.<locals>.model_fn at 0x000001FE1C5F4F28>) includes params argument, but params are not passed to Estimator.
+W0923 18:42:49.483523 23848 model_fn.py:630] Estimator's model_fn (<function create_model_fn.<locals>.model_fn at 0x000001FE1C5F4F28>) includes params argument, but params are not passed to Estimator.
+INFO:tensorflow:Not using Distribute Coordinator.
+I0923 18:42:49.484522 23848 estimator_training.py:186] Not using Distribute Coordinator.
+INFO:tensorflow:Running training and evaluation locally (non-distributed).
+I0923 18:42:49.484522 23848 training.py:612] Running training and evaluation locally (non-distributed).
+INFO:tensorflow:Start train and evaluate loop. The evaluate will happen after every checkpoint. Checkpoint frequency is determined based on RunConfig arguments: save_checkpoints_steps None or save_checkpoints_secs 600.
+I0923 18:42:49.485523 23848 training.py:700] Start train and evaluate loop. The evaluate will happen after every checkpoint. Checkpoint frequency is determined based on RunConfig arguments: save_checkpoints_steps None or save_checkpoints_secs 600.
+WARNING:tensorflow:From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
+W0923 18:42:49.504517 23848 deprecation.py:323] From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\data_decoders\tf_example_decoder.py:167: The name tf.FixedLenFeature is deprecated. Please use tf.io.FixedLenFeature instead.
+
+W0923 18:42:49.515513 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\data_decoders\tf_example_decoder.py:167: The name tf.FixedLenFeature is deprecated. Please use tf.io.FixedLenFeature instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\data_decoders\tf_example_decoder.py:182: The name tf.VarLenFeature is deprecated. Please use tf.io.VarLenFeature instead.
+
+W0923 18:42:49.516514 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\data_decoders\tf_example_decoder.py:182: The name tf.VarLenFeature is deprecated. Please use tf.io.VarLenFeature instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\builders\dataset_builder.py:61: The name tf.gfile.Glob is deprecated. Please use tf.io.gfile.glob instead.
+
+W0923 18:42:49.529514 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\builders\dataset_builder.py:61: The name tf.gfile.Glob is deprecated. Please use tf.io.gfile.glob instead.
+
+WARNING:tensorflow:num_readers has been reduced to 1 to match input file shards.
+W0923 18:42:49.533511 23848 dataset_builder.py:66] num_readers has been reduced to 1 to match input file shards.
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\builders\dataset_builder.py:80: parallel_interleave (from tensorflow.contrib.data.python.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.parallel_interleave(...)`.
+W0923 18:42:49.538505 23848 deprecation.py:323] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\builders\dataset_builder.py:80: parallel_interleave (from tensorflow.contrib.data.python.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.parallel_interleave(...)`.
+WARNING:tensorflow:From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\contrib\data\python\ops\interleave_ops.py:77: parallel_interleave (from tensorflow.python.data.experimental.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.interleave(map_func, cycle_length, block_length, num_parallel_calls=tf.data.experimental.AUTOTUNE)` instead. If sloppy execution is desired, use `tf.data.Options.experimental_determinstic`.
+W0923 18:42:49.539506 23848 deprecation.py:323] From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\contrib\data\python\ops\interleave_ops.py:77: parallel_interleave (from tensorflow.python.data.experimental.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.interleave(map_func, cycle_length, block_length, num_parallel_calls=tf.data.experimental.AUTOTUNE)` instead. If sloppy execution is desired, use `tf.data.Options.experimental_determinstic`.
+2020-09-23 18:42:50.183458: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library nvcuda.dll
+2020-09-23 18:42:50.270601: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+2020-09-23 18:42:50.283433: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 1 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:03:00.0
+2020-09-23 18:42:50.294211: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 2 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:82:00.0
+2020-09-23 18:42:50.302210: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 3 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+2020-09-23 18:42:50.309890: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudart64_100.dll
+2020-09-23 18:42:50.318429: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cublas64_100.dll
+2020-09-23 18:42:50.327216: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cufft64_100.dll
+2020-09-23 18:42:50.333461: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library curand64_100.dll
+2020-09-23 18:42:50.344210: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cusolver64_100.dll
+2020-09-23 18:42:50.353637: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cusparse64_100.dll
+2020-09-23 18:42:50.370015: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudnn64_7.dll
+2020-09-23 18:42:50.375004: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0, 1, 2, 3
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\data_decoders\tf_example_decoder.py:462: The name tf.sparse_tensor_to_dense is deprecated. Please use tf.sparse.to_dense instead.
+
+W0923 18:42:50.437202 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\data_decoders\tf_example_decoder.py:462: The name tf.sparse_tensor_to_dense is deprecated. Please use tf.sparse.to_dense instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\data_decoders\tf_example_decoder.py:455: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+W0923 18:42:50.495184 23848 deprecation.py:323] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\data_decoders\tf_example_decoder.py:455: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\data_decoders\tf_example_decoder.py:466: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+W0923 18:42:50.513178 23848 deprecation.py:323] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\data_decoders\tf_example_decoder.py:466: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+WARNING:tensorflow:From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\autograph\converters\directives.py:119: The name tf.is_nan is deprecated. Please use tf.math.is_nan instead.
+
+W0923 18:42:59.795256 23848 module_wrapper.py:139] From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\autograph\converters\directives.py:119: The name tf.is_nan is deprecated. Please use tf.math.is_nan instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\utils\ops.py:468: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0923 18:42:59.920184 23848 deprecation.py:323] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\utils\ops.py:468: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\autograph\converters\directives.py:119: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+W0923 18:43:01.928543 23848 module_wrapper.py:139] From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\autograph\converters\directives.py:119: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\autograph\converters\directives.py:119: The name tf.image.resize_images is deprecated. Please use tf.image.resize instead.
+
+W0923 18:43:03.899949 23848 module_wrapper.py:139] From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\autograph\converters\directives.py:119: The name tf.image.resize_images is deprecated. Please use tf.image.resize instead.
+
+WARNING:tensorflow:From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\autograph\converters\directives.py:119: The name tf.string_to_hash_bucket_fast is deprecated. Please use tf.strings.to_hash_bucket_fast instead.
+
+W0923 18:43:06.194185 23848 module_wrapper.py:139] From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\autograph\converters\directives.py:119: The name tf.string_to_hash_bucket_fast is deprecated. Please use tf.strings.to_hash_bucket_fast instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\builders\dataset_builder.py:148: batch_and_drop_remainder (from tensorflow.contrib.data.python.ops.batching) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.batch(..., drop_remainder=True)`.
+W0923 18:43:06.680031 23848 deprecation.py:323] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\builders\dataset_builder.py:148: batch_and_drop_remainder (from tensorflow.contrib.data.python.ops.batching) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.batch(..., drop_remainder=True)`.
+INFO:tensorflow:Calling model_fn.
+I0923 18:43:06.696026 23848 estimator.py:1148] Calling model_fn.
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py:162: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+W0923 18:43:06.722018 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py:162: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\contrib\layers\python\layers\layers.py:2784: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+W0923 18:43:06.734014 23848 deprecation.py:323] From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\contrib\layers\python\layers\layers.py:2784: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\core\anchor_generator.py:149: The name tf.assert_equal is deprecated. Please use tf.compat.v1.assert_equal instead.
+
+W0923 18:43:08.239535 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\core\anchor_generator.py:149: The name tf.assert_equal is deprecated. Please use tf.compat.v1.assert_equal instead.
+
+INFO:tensorflow:Scale of 0 disables regularizer.
+I0923 18:43:08.249531 23848 regularizers.py:98] Scale of 0 disables regularizer.
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py:986: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+W0923 18:43:08.249531 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py:986: The name tf.get_variable_scope is deprecated. Please use tf.compat.v1.get_variable_scope instead.
+
+INFO:tensorflow:Scale of 0 disables regularizer.
+I0923 18:43:08.267525 23848 regularizers.py:98] Scale of 0 disables regularizer.
+INFO:tensorflow:depth of additional conv before box predictor: 0
+I0923 18:43:08.268526 23848 convolutional_box_predictor.py:148] depth of additional conv before box predictor: 0
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\box_coders\faster_rcnn_box_coder.py:82: The name tf.log is deprecated. Please use tf.math.log instead.
+
+W0923 18:43:08.838344 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\box_coders\faster_rcnn_box_coder.py:82: The name tf.log is deprecated. Please use tf.math.log instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\core\minibatch_sampler.py:81: The name tf.random_shuffle is deprecated. Please use tf.random.shuffle instead.
+
+W0923 18:43:08.880331 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\core\minibatch_sampler.py:81: The name tf.random_shuffle is deprecated. Please use tf.random.shuffle instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\utils\ops.py:1085: calling crop_and_resize_v1 (from tensorflow.python.ops.image_ops_impl) with box_ind is deprecated and will be removed in a future version.
+Instructions for updating:
+box_ind is deprecated, use box_indices instead
+W0923 18:43:09.042279 23848 deprecation.py:506] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\utils\ops.py:1085: calling crop_and_resize_v1 (from tensorflow.python.ops.image_ops_impl) with box_ind is deprecated and will be removed in a future version.
+Instructions for updating:
+box_ind is deprecated, use box_indices instead
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py:185: The name tf.AUTO_REUSE is deprecated. Please use tf.compat.v1.AUTO_REUSE instead.
+
+W0923 18:43:09.059273 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py:185: The name tf.AUTO_REUSE is deprecated. Please use tf.compat.v1.AUTO_REUSE instead.
+
+WARNING:tensorflow:From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\contrib\layers\python\layers\layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+W0923 18:43:09.556115 23848 deprecation.py:323] From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\contrib\layers\python\layers\layers.py:1634: flatten (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.flatten instead.
+INFO:tensorflow:Scale of 0 disables regularizer.
+I0923 18:43:09.561114 23848 regularizers.py:98] Scale of 0 disables regularizer.
+INFO:tensorflow:Scale of 0 disables regularizer.
+I0923 18:43:09.578109 23848 regularizers.py:98] Scale of 0 disables regularizer.
+INFO:tensorflow:Scale of 0 disables regularizer.
+I0923 18:43:09.605100 23848 regularizers.py:98] Scale of 0 disables regularizer.
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\predictors\heads\mask_head.py:146: The name tf.image.resize_bilinear is deprecated. Please use tf.compat.v1.image.resize_bilinear instead.
+
+W0923 18:43:09.606100 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\predictors\heads\mask_head.py:146: The name tf.image.resize_bilinear is deprecated. Please use tf.compat.v1.image.resize_bilinear instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py:2235: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+W0923 18:43:09.638089 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py:2235: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py:2236: get_or_create_global_step (from tensorflow.contrib.framework.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.get_or_create_global_step
+W0923 18:43:09.640089 23848 deprecation.py:323] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py:2236: get_or_create_global_step (from tensorflow.contrib.framework.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.get_or_create_global_step
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\utils\variables_helper.py:126: The name tf.train.NewCheckpointReader is deprecated. Please use tf.compat.v1.train.NewCheckpointReader instead.
+
+W0923 18:43:09.644088 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\utils\variables_helper.py:126: The name tf.train.NewCheckpointReader is deprecated. Please use tf.compat.v1.train.NewCheckpointReader instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\model_lib.py:317: The name tf.train.init_from_checkpoint is deprecated. Please use tf.compat.v1.train.init_from_checkpoint instead.
+
+W0923 18:43:09.654084 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\model_lib.py:317: The name tf.train.init_from_checkpoint is deprecated. Please use tf.compat.v1.train.init_from_checkpoint instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\core\losses.py:174: The name tf.losses.huber_loss is deprecated. Please use tf.compat.v1.losses.huber_loss instead.
+
+W0923 18:43:10.801719 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\core\losses.py:174: The name tf.losses.huber_loss is deprecated. Please use tf.compat.v1.losses.huber_loss instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\core\losses.py:180: The name tf.losses.Reduction is deprecated. Please use tf.compat.v1.losses.Reduction instead.
+
+W0923 18:43:10.805718 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\core\losses.py:180: The name tf.losses.Reduction is deprecated. Please use tf.compat.v1.losses.Reduction instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\core\losses.py:345: softmax_cross_entropy_with_logits (from tensorflow.python.ops.nn_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+
+Future major versions of TensorFlow will allow gradients to flow
+into the labels input on backprop by default.
+
+See `tf.nn.softmax_cross_entropy_with_logits_v2`.
+
+W0923 18:43:10.849704 23848 deprecation.py:323] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\core\losses.py:345: softmax_cross_entropy_with_logits (from tensorflow.python.ops.nn_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+
+Future major versions of TensorFlow will allow gradients to flow
+into the labels input on backprop by default.
+
+See `tf.nn.softmax_cross_entropy_with_logits_v2`.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py:2202: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+
+W0923 18:43:11.386533 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\meta_architectures\faster_rcnn_meta_arch.py:2202: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\model_lib.py:341: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+W0923 18:43:11.389532 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\model_lib.py:341: The name tf.train.get_or_create_global_step is deprecated. Please use tf.compat.v1.train.get_or_create_global_step instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\builders\optimizer_builder.py:52: The name tf.train.MomentumOptimizer is deprecated. Please use tf.compat.v1.train.MomentumOptimizer instead.
+
+W0923 18:43:11.397529 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\builders\optimizer_builder.py:52: The name tf.train.MomentumOptimizer is deprecated. Please use tf.compat.v1.train.MomentumOptimizer instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\model_lib.py:359: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
+
+W0923 18:43:11.400528 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\model_lib.py:359: The name tf.trainable_variables is deprecated. Please use tf.compat.v1.trainable_variables instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\model_lib.py:369: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+W0923 18:43:11.401528 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\model_lib.py:369: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\framework\indexed_slices.py:424: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+  "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\framework\indexed_slices.py:424: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+  "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\model_lib.py:472: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+W0923 18:43:14.814469 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\model_lib.py:472: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\model_lib.py:476: The name tf.add_to_collection is deprecated. Please use tf.compat.v1.add_to_collection instead.
+
+W0923 18:43:15.306285 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\model_lib.py:476: The name tf.add_to_collection is deprecated. Please use tf.compat.v1.add_to_collection instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\model_lib.py:477: The name tf.train.Scaffold is deprecated. Please use tf.compat.v1.train.Scaffold instead.
+
+W0923 18:43:15.309284 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\model_lib.py:477: The name tf.train.Scaffold is deprecated. Please use tf.compat.v1.train.Scaffold instead.
+
+INFO:tensorflow:Done calling model_fn.
+I0923 18:43:15.310284 23848 estimator.py:1150] Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+I0923 18:43:15.311284 23848 basic_session_run_hooks.py:541] Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+I0923 18:43:17.824483 23848 monitored_session.py:240] Graph was finalized.
+2020-09-23 18:43:17.826510: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2020-09-23 18:43:18.679612: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+2020-09-23 18:43:18.692368: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 1 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:03:00.0
+2020-09-23 18:43:18.703865: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 2 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:82:00.0
+2020-09-23 18:43:18.713086: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 3 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+2020-09-23 18:43:18.722180: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudart64_100.dll
+2020-09-23 18:43:18.727712: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cublas64_100.dll
+2020-09-23 18:43:18.734065: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cufft64_100.dll
+2020-09-23 18:43:18.741253: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library curand64_100.dll
+2020-09-23 18:43:18.746206: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cusolver64_100.dll
+2020-09-23 18:43:18.752428: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cusparse64_100.dll
+2020-09-23 18:43:18.757612: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudnn64_7.dll
+2020-09-23 18:43:18.763186: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0, 1, 2, 3
+2020-09-23 18:43:20.666259: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-09-23 18:43:20.674558: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 1 2 3
+2020-09-23 18:43:20.681845: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N N N N
+2020-09-23 18:43:20.685527: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 1:   N N N N
+2020-09-23 18:43:20.690745: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 2:   N N N N
+2020-09-23 18:43:20.694369: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 3:   N N N N
+2020-09-23 18:43:20.699727: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3379 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+2020-09-23 18:43:20.712285: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 3379 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2020-09-23 18:43:20.724179: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 3379 MB memory) -> physical GPU (device: 2, name: GeForce GTX 1080 Ti, pci bus id: 0000:82:00.0, compute capability: 6.1)
+2020-09-23 18:43:20.736749: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 3379 MB memory) -> physical GPU (device: 3, name: GeForce GTX 1080 Ti, pci bus id: 0000:83:00.0, compute capability: 6.1)
+INFO:tensorflow:Restoring parameters from training\model.ckpt-6341
+I0923 18:43:20.771579 23848 saver.py:1284] Restoring parameters from training\model.ckpt-6341
+WARNING:tensorflow:From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\saver.py:1069: get_checkpoint_mtimes (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file utilities to get mtimes.
+W0923 18:43:22.194207 23848 deprecation.py:323] From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\saver.py:1069: get_checkpoint_mtimes (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file utilities to get mtimes.
+INFO:tensorflow:Running local_init_op.
+I0923 18:43:22.924048 23848 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0923 18:43:23.234941 23848 session_manager.py:502] Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 6341 into training\model.ckpt.
+I0923 18:43:30.058528 23848 basic_session_run_hooks.py:606] Saving checkpoints for 6341 into training\model.ckpt.
+2020-09-23 18:43:37.193851: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cublas64_100.dll
+2020-09-23 18:43:57.655028: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudnn64_7.dll
+2020-09-23 18:43:58.828159: W tensorflow/stream_executor/cuda/redzone_allocator.cc:312] Internal: Invoking ptxas not supported on Windows
+Relying on driver to perform ptx compilation. This message will be only logged once.
+2020-09-23 18:43:59.054079: W tensorflow/core/common_runtime/bfc_allocator.cc:239] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.13GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-09-23 18:43:59.076431: W tensorflow/core/common_runtime/bfc_allocator.cc:305] Garbage collection: deallocate free memory regions (i.e., allocations) so that we can re-allocate a larger region to avoid OOM due to memory fragmentation. If you see this message frequently, you are running near the threshold of the available device memory and re-allocation may incur great performance overhead. You may try smaller batch sizes to observe the performance impact. Set TF_ENABLE_GPU_GARBAGE_COLLECTION=false if you'd like to disable this feature.
+2020-09-23 18:43:59.320581: W tensorflow/core/common_runtime/bfc_allocator.cc:239] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.07GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-09-23 18:43:59.545822: W tensorflow/core/common_runtime/bfc_allocator.cc:239] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.57GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-09-23 18:43:59.572812: W tensorflow/core/common_runtime/bfc_allocator.cc:239] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.21GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-09-23 18:43:59.598258: W tensorflow/core/common_runtime/bfc_allocator.cc:239] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.84GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-09-23 18:43:59.625147: W tensorflow/core/common_runtime/bfc_allocator.cc:239] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.08GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-09-23 18:43:59.746057: W tensorflow/core/common_runtime/bfc_allocator.cc:239] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.13GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-09-23 18:43:59.811071: W tensorflow/core/common_runtime/bfc_allocator.cc:239] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.07GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-09-23 18:43:59.858348: W tensorflow/core/common_runtime/bfc_allocator.cc:239] Allocator (GPU_0_bfc) ran out of memory trying to allocate 3.06GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2020-09-23 18:44:00.148868: W tensorflow/core/common_runtime/bfc_allocator.cc:239] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.68GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+INFO:tensorflow:loss = 0.25126284, step = 6341
+I0923 18:44:01.131239 23848 basic_session_run_hooks.py:262] loss = 0.25126284, step = 6341
+INFO:tensorflow:global_step/sec: 1.13693
+I0923 18:45:29.086238 23848 basic_session_run_hooks.py:692] global_step/sec: 1.13693
+INFO:tensorflow:loss = 0.5481241, step = 6441 (88.423 sec)
+I0923 18:45:29.554091 23848 basic_session_run_hooks.py:260] loss = 0.5481241, step = 6441 (88.423 sec)
+INFO:tensorflow:global_step/sec: 1.08447
+I0923 18:47:01.297883 23848 basic_session_run_hooks.py:692] global_step/sec: 1.08447
+INFO:tensorflow:loss = 0.5054548, step = 6541 (91.746 sec)
+I0923 18:47:01.299884 23848 basic_session_run_hooks.py:260] loss = 0.5054548, step = 6541 (91.746 sec)
+INFO:tensorflow:global_step/sec: 1.08546
+I0923 18:48:33.423552 23848 basic_session_run_hooks.py:692] global_step/sec: 1.08546
+INFO:tensorflow:loss = 0.30316967, step = 6641 (92.621 sec)
+I0923 18:48:33.920394 23848 basic_session_run_hooks.py:260] loss = 0.30316967, step = 6641 (92.621 sec)
+INFO:tensorflow:global_step/sec: 1.07278
+I0923 18:50:06.638877 23848 basic_session_run_hooks.py:692] global_step/sec: 1.07278
+INFO:tensorflow:loss = 0.30386323, step = 6741 (92.741 sec)
+I0923 18:50:06.661869 23848 basic_session_run_hooks.py:260] loss = 0.30386323, step = 6741 (92.741 sec)
+INFO:tensorflow:global_step/sec: 1.05827
+I0923 18:51:41.133792 23848 basic_session_run_hooks.py:692] global_step/sec: 1.05827
+INFO:tensorflow:loss = 0.4389943, step = 6841 (94.986 sec)
+I0923 18:51:41.647630 23848 basic_session_run_hooks.py:260] loss = 0.4389943, step = 6841 (94.986 sec)
+INFO:tensorflow:global_step/sec: 1.11132
+I0923 18:53:11.116145 23848 basic_session_run_hooks.py:692] global_step/sec: 1.11132
+INFO:tensorflow:loss = 0.46321547, step = 6941 (89.557 sec)
+I0923 18:53:11.205117 23848 basic_session_run_hooks.py:260] loss = 0.46321547, step = 6941 (89.557 sec)
+INFO:tensorflow:Saving checkpoints for 6966 into training\model.ckpt.
+I0923 18:53:33.686960 23848 basic_session_run_hooks.py:606] Saving checkpoints for 6966 into training\model.ckpt.
+WARNING:tensorflow:From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\saver.py:963: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+W0923 18:53:35.692322 23848 deprecation.py:323] From C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\saver.py:963: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+INFO:tensorflow:Calling model_fn.
+I0923 18:53:41.141588 23848 estimator.py:1148] Calling model_fn.
+INFO:tensorflow:Scale of 0 disables regularizer.
+I0923 18:53:42.786094 23848 regularizers.py:98] Scale of 0 disables regularizer.
+INFO:tensorflow:Scale of 0 disables regularizer.
+I0923 18:53:42.820081 23848 regularizers.py:98] Scale of 0 disables regularizer.
+INFO:tensorflow:depth of additional conv before box predictor: 0
+I0923 18:53:42.822079 23848 convolutional_box_predictor.py:148] depth of additional conv before box predictor: 0
+INFO:tensorflow:Scale of 0 disables regularizer.
+I0923 18:53:43.976722 23848 regularizers.py:98] Scale of 0 disables regularizer.
+INFO:tensorflow:Scale of 0 disables regularizer.
+I0923 18:53:44.002709 23848 regularizers.py:98] Scale of 0 disables regularizer.
+INFO:tensorflow:Scale of 0 disables regularizer.
+I0923 18:53:46.829805 23848 regularizers.py:98] Scale of 0 disables regularizer.
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\eval_util.py:750: to_int64 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+W0923 18:53:47.768505 23848 deprecation.py:323] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\eval_util.py:750: to_int64 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\utils\visualization_utils.py:429: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+
+W0923 18:53:47.995424 23848 deprecation.py:323] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\utils\visualization_utils.py:429: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, there are two
+    options available in V2.
+    - tf.py_function takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It's easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    - tf.numpy_function maintains the semantics of the deprecated tf.py_func
+    (it is not differentiable, and manipulates numpy arrays). It drops the
+    stateful argument making all functions stateful.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\utils\visualization_utils.py:924: The name tf.summary.image is deprecated. Please use tf.compat.v1.summary.image instead.
+
+W0923 18:53:48.150387 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\utils\visualization_utils.py:924: The name tf.summary.image is deprecated. Please use tf.compat.v1.summary.image instead.
+
+WARNING:tensorflow:From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\model_lib.py:441: The name tf.metrics.mean is deprecated. Please use tf.compat.v1.metrics.mean instead.
+
+W0923 18:53:48.234332 23848 module_wrapper.py:139] From D:\cwge\ObjectDetection_MaskRCNN\models\research\object_detection\model_lib.py:441: The name tf.metrics.mean is deprecated. Please use tf.compat.v1.metrics.mean instead.
+
+INFO:tensorflow:Done calling model_fn.
+I0923 18:53:48.582247 23848 estimator.py:1150] Done calling model_fn.
+INFO:tensorflow:Starting evaluation at 2020-09-23T18:53:48Z
+I0923 18:53:48.600242 23848 evaluation.py:255] Starting evaluation at 2020-09-23T18:53:48Z
+INFO:tensorflow:Graph was finalized.
+I0923 18:53:49.068092 23848 monitored_session.py:240] Graph was finalized.
+2020-09-23 18:53:49.070097: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:02:00.0
+2020-09-23 18:53:49.083011: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 1 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:03:00.0
+2020-09-23 18:53:49.094381: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 2 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:82:00.0
+2020-09-23 18:53:49.103314: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 3 with properties:
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:83:00.0
+2020-09-23 18:53:49.111722: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudart64_100.dll
+2020-09-23 18:53:49.117813: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cublas64_100.dll
+2020-09-23 18:53:49.122142: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cufft64_100.dll
+2020-09-23 18:53:49.127030: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library curand64_100.dll
+2020-09-23 18:53:49.130695: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cusolver64_100.dll
+2020-09-23 18:53:49.134615: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cusparse64_100.dll
+2020-09-23 18:53:49.139385: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudnn64_7.dll
+2020-09-23 18:53:49.143208: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0, 1, 2, 3
+Traceback (most recent call last):
+  File "model_main.py", line 122, in <module>
+    tf.app.run()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\platform\app.py", line 40, in run
+    _run(main=main, argv=argv, flags_parser=_parse_flags_tolerate_undef)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\absl\app.py", line 300, in run
+    _run_main(main, args)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\absl\app.py", line 251, in _run_main
+    sys.exit(main(argv))
+  File "model_main.py", line 118, in main
+    tf.estimator.train_and_evaluate(estimator, train_spec, eval_specs[0])
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_estimator\python\estimator\training.py", line 473, in train_and_evaluate
+    return executor.run()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_estimator\python\estimator\training.py", line 613, in run
+    return self.run_local()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_estimator\python\estimator\training.py", line 714, in run_local
+    saving_listeners=saving_listeners)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_estimator\python\estimator\estimator.py", line 370, in train
+    loss = self._train_model(input_fn, hooks, saving_listeners)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_estimator\python\estimator\estimator.py", line 1161, in _train_model
+    return self._train_model_default(input_fn, hooks, saving_listeners)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_estimator\python\estimator\estimator.py", line 1195, in _train_model_default
+    saving_listeners)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_estimator\python\estimator\estimator.py", line 1494, in _train_with_estimator_spec
+    _, loss = mon_sess.run([estimator_spec.train_op, estimator_spec.loss])
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\monitored_session.py", line 754, in run
+    run_metadata=run_metadata)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\monitored_session.py", line 1259, in run
+    run_metadata=run_metadata)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\monitored_session.py", line 1360, in run
+    raise six.reraise(*original_exc_info)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\six.py", line 703, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\monitored_session.py", line 1345, in run
+    return self._sess.run(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\monitored_session.py", line 1426, in run
+    run_metadata=run_metadata))
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\basic_session_run_hooks.py", line 594, in after_run
+    if self._save(run_context.session, global_step):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\basic_session_run_hooks.py", line 619, in _save
+    if l.after_save(session, step):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_estimator\python\estimator\training.py", line 519, in after_save
+    self._evaluate(global_step_value)  # updates self.eval_result
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_estimator\python\estimator\training.py", line 539, in _evaluate
+    self._evaluator.evaluate_and_export())
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_estimator\python\estimator\training.py", line 920, in evaluate_and_export
+    hooks=self._eval_spec.hooks)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_estimator\python\estimator\estimator.py", line 480, in evaluate
+    name=name)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_estimator\python\estimator\estimator.py", line 522, in _actual_eval
+    return _evaluate()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_estimator\python\estimator\estimator.py", line 511, in _evaluate
+    output_dir=self.eval_dir(name))
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_estimator\python\estimator\estimator.py", line 1619, in _evaluate_run
+    config=self._session_config)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\evaluation.py", line 269, in _evaluate_once
+    session_creator=session_creator, hooks=hooks) as session:
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\monitored_session.py", line 1014, in __init__
+    stop_grace_period_secs=stop_grace_period_secs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\monitored_session.py", line 725, in __init__
+    self._sess = _RecoverableSession(self._coordinated_creator)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\monitored_session.py", line 1207, in __init__
+    _WrappedSession.__init__(self, self._create_session())
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\monitored_session.py", line 1212, in _create_session
+    return self._sess_creator.create_session()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\monitored_session.py", line 878, in create_session
+    self.tf_sess = self._session_creator.create_session()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\monitored_session.py", line 647, in create_session
+    init_fn=self._scaffold.init_fn)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\session_manager.py", line 290, in prepare_session
+    config=config)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\training\session_manager.py", line 194, in _restore_checkpoint
+    sess = session.Session(self._target, graph=self._graph, config=config)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\client\session.py", line 1585, in __init__
+    super(Session, self).__init__(target, graph, config=config)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\tensorflow_core\python\client\session.py", line 699, in __init__
+    self._session = tf_session.TF_NewSessionRef(self._graph._c_graph, opts)
+tensorflow.python.framework.errors_impl.InternalError: CUDA runtime implicit initialization on GPU:2 failed. Status: out of memory
